@@ -1,0 +1,25 @@
+• An Azure Datalake Gen 2 storage account.
+Inlezen 15 minuten
+Uitvoeren in de portal 10 minuten
+Template aanpassen & aanmaken in ARM 3 uurtjes
+
+
+• A key vault with a secret
+Inlezen 25 minuten
+Uitvoeren in de portal 10 minuten
+Template aanpassen & aanmaken in ARM 2 uurtjes
+
+• A virtual network
+Inlezen 20 minuten
+Uitvoeren in de portal 10 minuutjes 
+Template aanpassen & aanmaken in ARM 2 uurtjes
+
+• A web app that can access both the datalake storage and the key vault secret
+
+Inlezen 20 minuten
+Uitvoeren in de portal nvt
+
+• A load balancer that sits between the web app and the internet
+
+Inlezen 15 minuten
+Uitvoeren in de portal nvt
