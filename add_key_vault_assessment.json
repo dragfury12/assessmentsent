@@ -1,0 +1,42 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "keyVaultName": {
+      "type": "string",
+      "metadata": {
+        "description": "Name of the vault"
+      }
+    },
+    "tenantId": {
+      "type": "string",
+      "metadata": {
+        "description": "Tenant Id for the subscription and use assigned access to the vault. Available from the Get-AzureRMSubscription PowerShell cmdlet"
+      }
+    }
+  },
+  "variables":{
+     "skuFamily": "A",
+     "skuName": "standard"
+  },
+  "resources": [
+    {
+      "type": "Microsoft.KeyVault/vaults",
+      "name": "[parameters('keyVaultName')]",
+      "apiVersion": "2015-06-01",
+      "location": "[resourceGroup().location]",
+      "properties": {
+        "sku": {
+          "name": "[variables('skuName')]",
+          "family": "[variables('skuFamily')]"
+        },
+"accessPolicies": [
+],
+        "tenantId": "[parameters('tenantId')]",
+        "enabledForDeployment": false,
+        "enabledForTemplateDeployment": true,
+        "enabledForVolumeEncryption": false
+      }
+    }
+  ]
+}
